@@ -165,6 +165,18 @@ func (cb *SnakeSystem) Update(dt float32) {
         }
     } else {
         if engo.Input.Button("Space").JustPressed() {
+            for i := 0; i<len(tail); i++ {
+                tail[i].x = 500
+                tail[i].y = 500
+            }
+            for i := 0; i<len(tail); i++ {
+                tail[i].SpaceComponent = common.SpaceComponent {
+                    Position: engo.Point{float32(tail[i].x*scaling), float32(tail[i].y*scaling)},
+                    Width:  1,
+                    Height: 1,
+                }
+            }
+
             tail = tail[:0]
             head.x = 0
             head.y = 0
