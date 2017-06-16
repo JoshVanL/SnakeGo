@@ -227,8 +227,8 @@ func (*myScene) Setup(world *ecs.World) {
 func main() {
 	opts := engo.RunOptions{
 		Title: "Snake",
-		Width:  400,
-		Height: 400,
+		Width:  390,
+		Height: 390,
         Fullscreen : false,
         FPSLimit : 10,
 	}
